@@ -8,9 +8,14 @@
 </head>
 <body>
     <!-- 送信先がsubmit.php -->
+    <!-- urlパラメータにつくのがgetつなないのがpost -->
+    <!-- getのメリットはurlにつくので、urlをシェアするときに便利だが、passwordを入力する場合は
+         バレてしまうのでだめ。そのときはpost(password  長文)を用いる -->
+    <!-- 受け取る側もget postを指定しなければならない、このとき送信元とmethodが一致しなければならない -->
     <form action="submit.php" method="get">
         <label for="my_name">お名前:</label>
         <!-- フォーム ここのidとlabelのfor属性と一致するとlabelになる-->
+        <!-- labelタグを用いることで、お名前をクリックしても入力が可能になる -->
         <input type="text" id="my_name" name="my_name">
         <!-- 送信ボタン -->
         <input type="submit" value="送信する">
