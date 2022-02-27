@@ -8,14 +8,14 @@
 </head>
 <body>
     <h2>ご予約日</h2>
-    <?php if(!empty($reserve)): ?>
+    <?php if(!empty($_REQUEST['reserve'])): ?>
     <?php $reserves = $_REQUEST['reserve']; ?>
     <ul>
         <?php foreach ($reserves as $reserve): ?>
           <li><?php echo $reserve ?></li>
         <?php endforeach; ?>
     </ul>
-    <?php else: ?>
+    <?php else:?>
         <p>予約日がありません</p>
     <?php endif; ?>
 </body>
